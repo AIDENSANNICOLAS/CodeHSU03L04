@@ -3,7 +3,7 @@ class Bill
     private double costOfMeal;
     private int totalCustomers;
 
-    // Constructor
+    // Constructor because "Bill" matches the class name
     public Bill(double totalBill, int numCustomers)
     {
         costOfMeal = totalBill;
@@ -15,12 +15,26 @@ class Bill
     //if the total number of customers is 4 or more but less than 8, 20% extra
     //less than 4 but 2 or more, 5% extra
     //less than 2, nothing extra
+
+    //method is responsible for updating the
+    //void = no return
     public void addTip()
     {
+        if(totalCustomers >= 8)
+        {
+            //costOfMeal = costOfMeal + 0.25(costOfMeal)
+            //costOfMeal = costOfMeal(1.25)
+            costOfMeal *= 1.25;
+        }
+
+        else if(totalCustomers >= 4)
+        {
+            costOfMeal *= 1.2;
+        }
 
     }
 
-
+//toString prints out the literal string rather than the actual location of the code
     public String toString()
     {
         // Round the bill to two decimal places
